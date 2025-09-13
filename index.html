@@ -1,0 +1,202 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fitness Studio — Landing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --red:#e31b23;
+      --black:#070707;
+      --muted:#6b6b6b;
+      --card-radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,Segoe UI,Roboto,system-ui,Arial;margin:0;color:#111;background:#fff}
+    a{color:inherit;text-decoration:none}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 40px;background:transparent;position:absolute;top:0;left:0;width:100%;z-index:10}
+    .logo{font-family:Montserrat;font-weight:800;letter-spacing:1px;color:#fff}
+    nav ul{display:flex;gap:20px;list-style:none;padding:0;margin:0;font-size:14px;color:#fff}/* Hero */
+.hero{display:flex;align-items:center;justify-content:space-between;min-height:100vh;background:#000;color:#fff;padding:0 40px;position:relative;overflow:hidden}
+.hero img{max-width:50%;height:auto;object-fit:cover}
+.hero-content{max-width:500px;}
+.hero .eyebrow{display:inline-block;background:#fff;color:#000;padding:6px 14px;border-radius:20px;font-weight:700;font-size:12px;margin-bottom:14px}
+.hero h1{font-family:Montserrat;font-size:46px;line-height:1.2;margin:0 0 16px}
+.hero p{color:#ccc;margin:0 0 20px}
+.btn{display:inline-block;background:var(--red);color:#fff;padding:12px 18px;border-radius:10px;font-weight:700}
+
+.container{max-width:1200px;margin:30px auto;padding:0 20px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#111;color:#fff;border-radius:var(--card-radius);overflow:hidden;position:relative;padding:18px;min-height:160px;display:flex;flex-direction:column;justify-content:flex-end}
+.card.small{min-height:100px}
+.card .label{font-weight:700;font-family:Montserrat;font-size:18px}
+.card .meta{font-size:12px;color:#ddd;margin-top:6px}
+.join{display:inline-block;margin-top:12px;background:#fff;color:#000;padding:8px 12px;border-radius:8px;font-weight:600}
+.card::before{content:'';position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.55)}
+.c1::before{background-image:url('g1.webp');}
+.c2::before{background-image:url('g2.jpeg');}
+.c3::before{background-image:url('https://images.unsplash.com/photo-1549576490-b0b4831ef60a?auto=format&fit=crop&w=1200&q=60');}
+.c4::before{background-image:url('g3.jpg');}
+.c5::before{background-image:url('g4.jpg');}
+.c6::before{background-image:url('g5.jpg');}
+
+.gallery .card > *{position:relative;z-index:2}
+
+.right-top{text-align:center;padding:20px}
+.eyebrow-red{display:inline-block;background:var(--red);color:#fff;padding:6px 14px;border-radius:20px;font-weight:700;font-size:12px}
+.team-title{font-family:Montserrat;font-size:28px;margin:12px 0}
+.coaches{display:flex;gap:18px;justify-content:center;margin-top:18px}
+.coach{width:140px;text-align:center}
+.coach .photo{height:160px;border-radius:12px;overflow:hidden;position:relative}
+.coach .photo img{width:100%;height:100%;object-fit:cover}
+.coach h4{margin:10px 0 6px 0;font-size:16px}
+.coach p{font-size:13px;color:var(--muted);margin:0}
+
+.features{display:flex;gap:18px;margin-top:26px}
+.feature{flex:1;background:#fff;border-radius:12px;padding:18px;box-shadow:0 8px 18px rgba(0,0,0,.06)}
+.feature h3{margin:0 0 8px 0;font-family:Montserrat}
+.who{display:flex;gap:24px;align-items:center;margin-top:36px}
+.who .text{flex:1}
+.who .image{flex:1;position:relative}
+.who .image img{width:100%;height:auto}
+
+.hero-right{background:#070707;color:#fff;border-radius:12px;padding:40px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.hero-right h1{font-family:Montserrat;font-size:36px;margin:0 0 10px}
+.hero-right p{color:#ccc;margin:0 0 18px}
+
+footer{padding:40px;text-align:center;color:var(--muted);font-size:14px}
+
+@media(max-width:1000px){.split{grid-template-columns:1fr;}.gallery{grid-template-columns:repeat(2,1fr)}.coaches{flex-wrap:wrap}.who{flex-direction:column}.hero{flex-direction:column;padding:80px 20px;text-align:center}.hero img{max-width:100%;margin-top:20px}.hero-content{max-width:100%}}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Gymate</div>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Gallery</li>
+        <li>Schedule</li>
+        <li>Blog</li>
+        <li>Pricing</li>
+        <li>Classes</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+  </header>  <section class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">FIND YOUR ENERGY</div>
+      <h1>MAKE YOUR BODY<br>FIT & PERFECT</h1>
+      <p>Push your limits with expert trainers and top-class facilities designed for your success.</p>
+      <a class="btn" href="#">OUR CLASSES</a>
+    </div>
+    <img src="gymnew-removebg-preview.png" alt="Fitness">
+  </section>  <main class="container">
+    <section class="split">
+      <div>
+        <div class="gallery">
+          <article class="card c1">
+            <div class="label">Cycling</div>
+            <div class="meta">Dorian Yates • Wed 9:00 am</div>
+            <a class="join" href="#">JOIN NOW →</a>
+          </article><article class="card c2">
+        <div class="label">Meditation</div>
+        <div class="meta">Maria Mich • Fri 1:00 pm</div>
+        <a class="join" href="#">JOIN NOW →</a>
+      </article>
+
+      <article class="card c3">
+        <div class="label">Boxing</div>
+        <div class="meta">John Flex • Tue 4:00 pm</div>
+        <a class="join" href="#">JOIN NOW →</a>
+      </article>
+
+      <article class="card c4 small"></article>
+      <article class="card c5 small"></article>
+      <article class="card c6 small"></article>
+    </div>
+
+    <div class="features" style="margin-top:22px">
+      <div class="feature">
+        <h3>Progression</h3>
+        <p>Our team of experts will work with you to create a customized plan that helps you achieve success one step at a time.</p>
+      </div>
+      <div class="feature">
+        <h3>Workout</h3>
+        <p>With a variety of workouts to choose from, you'll have everything you need to get into the best shape of your life.</p>
+      </div>
+      <div class="feature">
+        <h3>Nutritions</h3>
+        <p>Personalized meal plans to help you reach your specific health goals.</p>
+      </div>
+    </div>
+
+    <div class="who">
+      <div class="text">
+        <div style="display:inline-block;background:var(--red);color:#fff;padding:6px 12px;border-radius:12px;font-weight:700;font-size:12px">WHO WE ARE</div>
+        <h2 style="font-family:Montserrat;margin-top:10px">Take Your Health And Body To The Next Level</h2>
+        <p style="color:var(--muted)">We take your health and body to the next level with our comprehensive program designed to help you reach your fitness goals.</p>
+        <div style="display:flex;gap:18px;margin-top:14px">
+          <div style="text-align:center">
+            <div style="font-weight:700">PROFESSIONAL<br>TRAINERS</div>
+          </div>
+          <div style="text-align:center">
+            <div style="font-weight:700">MODERN<br>EQUIPMENTS</div>
+          </div>
+          <div style="text-align:center">
+            <div style="font-weight:700">FANCY GYM<br>MACHINES</div>
+          </div>
+        </div>
+        <div style="margin-top:18px"><a class="btn" href="#">TAKE A TOUR</a></div>
+      </div>
+      <div class="image">
+        <img src="g1.webp" alt="athlete">
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="right-top">
+      <div class="eyebrow-red">GYM TRAINERS</div>
+      <div class="team-title">Team Of Expert Coaches</div>
+      <p style="color:var(--muted);max-width:420px;margin:8px auto">Expert team of coaches helps you succeed in any goal, personalized guidance and motivation provided.</p>
+
+      <div class="coaches">
+        <div class="coach">
+          <div class="photo"><img src="c1.webp" alt="john"></div>
+          <h4>John Lewis</h4>
+          <p>Yoga Trainer</p>
+        </div>
+        <div class="coach">
+          <div class="photo"><img src="c3.jpg" alt="jonathan"></div>
+          <h4>Jonathan Doe</h4>
+          <p>Crossfit Trainer</p>
+        </div>
+        <div class="coach">
+          <div class="photo"><img src="c2.jpg" alt="ana"></div>
+          <h4>Ana June</h4>
+          <p>Personal Trainer</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="height:24px"></div>
+
+    <div class="hero-right">
+      <h1>MAKE YOUR BODY<br>FIT & PERFECT</h1>
+      <p>Find your energy and reach peak performance with our guided classes.</p>
+      <a class="btn" href="#">OUR CLASSES</a>
+    </div>
+  </div>
+</section>
+
+  </main>  <footer>
+    © <strong>GYM</strong> — Built with ❤
+  </footer>
+</body>
+</html>
